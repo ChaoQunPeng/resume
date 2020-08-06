@@ -2,9 +2,14 @@
   --primary: #16A085;
 }
 
+::selection {
+  background: var(--primary);
+  color     : #fff;
+}
+
 * {
-  margin: 0;
-  padding: 0;
+  margin    : 0;
+  padding   : 0;
   box-sizing: border-box;
 }
 
@@ -14,7 +19,6 @@ html {
 
 body {
   background: #f8f8f8;
-  user-select: none;
 }
 
 div {
@@ -38,63 +42,63 @@ p {
   line-height: 1.8;
 }
 
-/* li::before {
-  content: "\02022";
-  color: gray;
-  position: relative;
-  left: 0px;
-  bottom: 0px;
-} */
-
 .container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  width: 960px;
-  margin: 30px auto;
+  position  : relative;
+  z-index   : 1;
+  display   : flex;
+  width     : 960px;
+  margin    : 30px auto;
   box-shadow: 2px 2px 10px #ddd;
 }
 
 .left-layout {
-  width: 320px;
-  padding: 25px 25px 0 25px;
+  width     : 320px;
+  padding   : 25px 25px 0 25px;
   background: var(--primary);
-  color: #fff;
-  opacity: 0.9;
+  color     : #fff;
+  opacity   : 0.9;
 }
 
 .right-layout {
   background: #fff;
-  flex: 1;
-  padding: 25px 35px 0 40px;
+  flex      : 1;
+  padding   : 25px 35px 0 40px;
 }
 
 .avatar-wrap {
-  margin: 0 auto;
-  width: 150px;
-  border: 3px solid #118871;
-  height: 150px;
-  position: relative;
+  display      : block;
+  margin       : 0 auto;
+  width        : 150px;
+  border       : 3px solid #118871;
+  height       : 150px;
+  position     : relative;
   border-radius: 50%;
-  overflow: hidden;
+  overflow     : hidden;
+  box-shadow   : 0 0 20px #005c4a;
+  user-select  : none;
 }
 
 .avatar {
-  position: absolute;
-  display: block;
-  margin-top: -22px;
+  position   : absolute;
+  display    : block;
+  margin-top : -22px;
   margin-left: 0px;
-  width: 100%;
+  width      : 100%;
 }
 
 .me {
-  margin-top: 15px;
+  margin-top   : 15px;
   margin-bottom: 25px;
-  text-align: center;
+  text-align   : center;
 }
 
 .me>div {
-  font-size: 2.4rem;
+  font-size : 2.4rem;
+  transition: all .3s;
+}
+
+.me>div:hover {
+  text-shadow: 0 0 10px #fff;
 }
 
 .me>div:first-child {
@@ -106,9 +110,9 @@ p {
 }
 
 .block-title {
-  position: relative;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  position      : relative;
+  font-size     : 1.8rem;
+  margin-bottom : 15px;
   padding-bottom: 8px;
 }
 
@@ -122,22 +126,22 @@ p {
 
 .left-layout .block-title {
   border-bottom: 2px solid #fff;
-  color: #fff;
+  color        : #fff;
 }
 
 .right-layout .block-title {
   border-bottom: 2px solid #16A085;
-  color: #16A085;
+  color        : #16A085;
 }
 
 .label {
-  display: flex;
+  display      : flex;
   margin-bottom: 8px;
 }
 
 .label>div {
   flex-shrink: 1;
-  flex-basis: 0%;
+  flex-basis : 0%;
 }
 
 .label-label {
@@ -172,13 +176,13 @@ p {
 
   /* tablets and desktop */
   .container {
-    width: 100%;
-    margin: 0;
+    width         : 100%;
+    margin        : 0;
     flex-direction: column;
   }
 
   .left-layout {
-    width: 100%;
+    width  : 100%;
     padding: 25px 15px 0 15px;
   }
 
@@ -192,22 +196,22 @@ p {
 }
 
 .fixed-tool {
-  display: block;
-  position: fixed;
-  right: 10px;
-  z-index: 1000;
-  background: var(--primary);
-  width: 50px;
-  height: 50px;
-  display: flex;
+  display        : block;
+  position       : fixed;
+  right          : 10px;
+  z-index        : 1000;
+  background     : var(--primary);
+  width          : 50px;
+  height         : 50px;
+  display        : flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 1px 1px 10px #ddd;
-  opacity: .8;
-  transition: all .3s;
+  align-items    : center;
+  border-radius  : 50%;
+  color          : #fff;
+  cursor         : pointer;
+  box-shadow     : 1px 1px 10px #ddd;
+  opacity        : .8;
+  transition     : all .3s;
 }
 
 .fixed-tool:hover {
@@ -220,10 +224,10 @@ p {
 
 .go-top {
   position: fixed;
-  bottom: 100px;
+  bottom  : 100px;
 }
 
 .down-pdf {
   position: fixed;
-  bottom: 30px;
+  bottom  : 30px;
 }
