@@ -14,6 +14,7 @@ html {
 
 body {
   background: #f8f8f8;
+  user-select: none;
 }
 
 div {
@@ -46,6 +47,8 @@ p {
 } */
 
 .container {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 960px;
   margin: 30px auto;
@@ -57,6 +60,7 @@ p {
   padding: 25px 25px 0 25px;
   background: var(--primary);
   color: #fff;
+  opacity: 0.9;
 }
 
 .right-layout {
@@ -188,8 +192,10 @@ p {
 }
 
 .fixed-tool {
+  display: block;
   position: fixed;
   right: 10px;
+  z-index: 1000;
   background: var(--primary);
   width: 50px;
   height: 50px;
@@ -200,12 +206,12 @@ p {
   color: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 10px #ddd;
-  opacity: 0.8;
+  opacity: .8;
   transition: all .3s;
 }
 
 .fixed-tool:hover {
-  opacity: .8;
+  opacity: .7;
 }
 
 .fixed-tool>i {
