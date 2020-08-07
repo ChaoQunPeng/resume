@@ -172,29 +172,6 @@ p {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 768px) {
-
-  /* tablets and desktop */
-  .container {
-    width         : 100%;
-    margin        : 0;
-    flex-direction: column;
-  }
-
-  .left-layout {
-    width  : 100%;
-    padding: 25px 15px 0 15px;
-  }
-
-  .right-layout {
-    padding: 25px 15px 0 15px;
-  }
-
-  .project>ul {
-    padding-left: 16px;
-  }
-}
-
 .fixed-tool {
   display        : block;
   position       : fixed;
@@ -224,10 +201,37 @@ p {
 
 .go-top {
   position: fixed;
-  bottom  : 100px;
+  bottom  : 30px;
 }
 
 .down-pdf {
   position: fixed;
-  bottom  : 30px;
+  bottom  : 100px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* tablets and desktop */
+  .container {
+    width         : 100%;
+    margin        : 0;
+    flex-direction: column;
+  }
+
+  .left-layout {
+    width  : 100%;
+    padding: 25px 15px 0 15px;
+  }
+
+  .right-layout {
+    padding: 25px 15px 0 15px;
+  }
+
+  .project>ul {
+    padding-left: 16px;
+  }
+
+  .down-pdf {
+    display: none;
+  }
 }
